@@ -91,9 +91,6 @@ export function AuthPage() {
                     <Card>
                         <CardHeader>
                             <CardTitle>Login</CardTitle>
-                            <CardDescription>
-                                Make changes to your account here. Click save when you're done.
-                            </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-2">
                             <div className="space-y-1">
@@ -116,9 +113,6 @@ export function AuthPage() {
                     <Card>
                         <CardHeader>
                             <CardTitle>Register</CardTitle>
-                            <CardDescription>
-                                Change your password here. After saving, you'll be logged out.
-                            </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-2">
                             <div className="space-y-1">
