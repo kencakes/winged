@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "target": "es5",
     "lib": [
@@ -26,6 +28,5 @@
   },
   "include": [
     "src"
-  ],
-  "extends": "./tsconfig.paths.json"
+  ]
 }
