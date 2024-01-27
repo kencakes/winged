@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import {Settings, LogOut, Home, PawPrint, Bird, Egg, Book} from "lucide-react";
 import {supabaseClient} from "@/config/supabase-client";
+import {ModeToggle} from "@/components/Mode-Toggle";
 
 
 const NavigationBar = ({className}: any) => {
@@ -49,6 +50,7 @@ const NavigationBar = ({className}: any) => {
                             <LogOut size={20} className="mr-2"/>
                             Sign out
                         </Button>
+                        <ModeToggle/>
                     </div>
                 </div>
             </div>
