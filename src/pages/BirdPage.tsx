@@ -1,7 +1,10 @@
+import PageTitle from "@/components/PageTitle";
+
 const BirdPage = () => {
-    return (<>
-        <h1>Bird Page</h1>
-    </>
+    return (
+        <div className="flex flex-col gap-4 w-full">
+            <PageTitle title="Birds" />
+        </div>
     )
 }
 

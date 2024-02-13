@@ -1,7 +1,10 @@
+import PageTitle from "@/components/PageTitle";
+
 const SettingsPage = () => {
-    return (<>
-        <h1>Settings Page</h1>
-    </>
+    return (
+        <div className="flex flex-col gap-4 w-full">
+            <PageTitle title="Settings" />
+        </div>
     )
 }
 
