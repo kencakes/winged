@@ -10,6 +10,7 @@ import SettingsPage from "@/pages/SettingsPage";
 import Sidebar from '@/components/Sidebar';
 import { cn } from './lib/utils';
 import { Toaster } from './components/ui/toaster';
+import BirdDetails from './pages/BirdDetails';
 
 function App() {
     return (
@@ -33,6 +34,14 @@ function App() {
                                 element={
                                     <ProtectedRoute>
                                         <BirdPage />
+                                    </ProtectedRoute>
+                                }
+                            />
+                            <Route
+                                path="/bird/:id"
+                                element={
+                                    <ProtectedRoute>
+                                        <BirdDetails />
                                     </ProtectedRoute>
                                 }
                             />

@@ -1,5 +1,5 @@
 import AddBirdDialog from "@/components/AddBirdDialog";
-import Card from "@/components/Card";
+import Card from "@/components/BirdCard";
 import PageTitle from "@/components/PageTitle";
 import { BirdContentProvider } from "@/context/BirdProvider";
 
@@ -14,9 +14,6 @@ const BirdPage = () => {
                         <AddBirdDialog />
                     </div>
                 </div>
-
-
-
                 <Card />
             </BirdContentProvider>
         </div>
