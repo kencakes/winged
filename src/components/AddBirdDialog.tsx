@@ -5,14 +5,19 @@ import { PlusCircleIcon } from 'lucide-react'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { useBirds } from '@/context/BirdProvider'
+import { useToast } from './ui/use-toast'
 
 export default function AddBirdDialog() {
     const { createBird } = useBirds();
+    const { toast } = useToast();
     const [name, setName] = useState('');
     const [birthdate, setBirthdate] = useState('');
 
     const addBird = (name: string, date: string) => {
         createBird(name, date);
+        toast({
+            title: `You have successfully added ${name}`
+        })
     }
 
     return (
