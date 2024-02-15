@@ -1,22 +1,10 @@
-import NavigationBar from "@/components/NavigationBar";
+import PageTitle from "@/components/PageTitle";
 
 const LogbookPage = () => {
-    return (<>
-            <div className="hidden md:block">
-                <div className="border-t">
-                    <div className="bg-background">
-                        <div className="grid lg:grid-cols-5">
-                            <NavigationBar className="h-screen"/>
-                            <div className="col-span-3 lg:col-span-4 lg:border-l ">
-                                <div className="h-full px-4 py-6 lg:px-8 ">
-                                    <h1>Logbook Page</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+    return (
+        <div className="flex flex-col gap-4 w-full">
+            <PageTitle title="Logbook" />
+        </div>
     )
 }
 

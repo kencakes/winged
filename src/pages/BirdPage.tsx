@@ -1,22 +1,25 @@
-import NavigationBar from "@/components/NavigationBar";
+import AddBirdDialog from "@/components/AddBirdDialog";
+import Card from "@/components/Card";
+import PageTitle from "@/components/PageTitle";
+import { BirdContentProvider } from "@/context/BirdProvider";
 
 const BirdPage = () => {
-    return (<>
-            <div className="hidden md:block">
-                <div className="border-t">
-                    <div className="bg-background">
-                        <div className="grid lg:grid-cols-5">
-                            <NavigationBar className="h-screen"/>
-                            <div className="col-span-3 lg:col-span-4 lg:border-l ">
-                                <div className="h-full px-4 py-6 lg:px-8 ">
-                                    <h1>Bird Page</h1>
-                                </div>
-                            </div>
-                        </div>
+    return (
+        <div className="flex flex-col gap-4 w-full">
+            <BirdContentProvider>
+                <div className="flex items-center justify-between space-y-2">
+                    <PageTitle title='Birds' />
+                    <div className="flex items-center space-x-2">
+                        {/* <SearchBar/> */}
+                        <AddBirdDialog />
                     </div>
                 </div>
-            </div>
-        </>
+
+
+
+                <Card />
+            </BirdContentProvider>
+        </div>
     )
 }
 
