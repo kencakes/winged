@@ -15,7 +15,7 @@ export interface ILogbook {
 export type LogbookContextType = {
   logbook: ILogbook[];
   isLoading: boolean;
-  getLogbookByBirdId: (id: string) => void;
+  getLogbookByBirdId: (id: number) => void;
   getLogbookById: (id: string) => void;
   createLogbook: (
     date: string,

@@ -18,6 +18,7 @@ export default function BirdCard() {
   // Also excutes every time the array of birds changes
   useEffect(() => {
     getBirdsByUserId();
+    console.log(birds);
   }, [birds]);
 
   const handleDelete = (id: string) => {

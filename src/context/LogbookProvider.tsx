@@ -16,13 +16,12 @@ export const LogbookContentProvider = ({ children }: Props) => {
   const [logbook, setLogbook] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getLogbookByBirdId = async (id: string) => {
+  const getLogbookByBirdId = async (id: number) => {
     setIsLoading(true);
 
     const { data: logbook, error } = await supabaseClient
       .from("logbook")
-      .select("*")
-      .eq("bird_id", id);
+      .select("*");
     if (error) throw error;
 
     setLogbook(logbook);
@@ -105,6 +104,8 @@ export const LogbookContentProvider = ({ children }: Props) => {
         updateLogbook,
         isLoading,
       }}
-    ></LogbookContent.Provider>
+    >
+      {children}
+    </LogbookContent.Provider>
   );
 };
